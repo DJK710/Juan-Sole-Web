@@ -184,8 +184,13 @@ nav {
     transition: var(--transition);
 }
 
-.nav-list a:hover::after {
+.nav-list a:hover::after,
+.nav-list a.active::after {
     width: 100%;
+}
+
+.nav-list a.active {
+    color: var(--primary-color);
 }
 
 .menu-toggle {
@@ -215,6 +220,41 @@ nav {
     background-color: var(--primary-color);
     width: 80%;
     margin: 0 auto;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    background: rgba(55, 40, 0, 0.9);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 22px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--primary-color);
+    color: #3d2a00;
 }
 
 /* Hero Section 
@@ -492,7 +532,7 @@ nav {
 footer {
     background-color: #5f4700;
     color: white;
-    padding: 3rem 0 2rem;
+    padding: 1rem 0 1rem;
     border-top: 2px solid #d4af37;
 }
 
@@ -618,4 +658,599 @@ footer .container {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* =========================================================
+   JUAN SOLÉ PAGINA
+   ========================================================= */
+
+.juan-page {
+    background: #6b4d00;
+    color: #fff;
+}
+
+
+/* HEADER */
+
+.juan-page .juan-header {
+    height: 92px;
+    background: #4a3500;
+    border-bottom: 1px solid rgba(220, 175, 45, 0.35);
+}
+
+.juan-page .juan-header-inner {
+    width: min(1180px, calc(100% - 40px));
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.juan-page .juan-logo {
+    display: block;
+}
+
+.juan-page .juan-logo img {
+    display: block;
+    width: 290px;
+    height: auto;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+
+/* NAVIGATIE */
+
+.juan-page .juan-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.juan-page .juan-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.juan-page .juan-nav a:hover,
+.juan-page .juan-nav a.active {
+    color: #d8aa35;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.juan-intro {
+    padding: 80px 0 100px;
+}
+
+.juan-intro-inner {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 400px minmax(0, 1fr);
+    gap: 80px;
+
+    align-items: center;
+}
+
+.juan-intro-image {
+    width: 400px;
+}
+
+.juan-intro-image img {
+    display: block;
+
+    width: 400px;
+    height: 600px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 4px;
+}
+
+.juan-page .juan-intro-text {
+    max-width: 600px;
+    align-self: start !important;
+    margin-top: 0 !important;
+}
+
+.juan-label,
+.juan-section-label {
+    margin-bottom: 20px;
+
+    color: #d8aa35;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.juan-page .juan-intro-text h1 {
+    margin: 0;
+    color: #e0b83f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.juan-divider {
+    width: 75px;
+    height: 2px;
+    margin: 32px 0;
+
+    background: #d8aa35;
+}
+
+.juan-lead {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TEKSTSECTIES
+   ========================================================= */
+
+.juan-story,
+.juan-feature,
+.juan-identity,
+.juan-lucia {
+    padding: 80px 0;
+}
+
+.juan-story-inner,
+.juan-feature-inner,
+.juan-identity-inner,
+.juan-lucia-inner {
+    width: min(1000px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.juan-page h2 {
+    margin: 0 0 30px;
+
+    color: #e0b83f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.juan-page p {
+    margin: 0 0 24px;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.juan-feature {
+    background: rgba(74, 53, 0, 0.18);
+}
+
+.juan-feature-text {
+    max-width: 850px;
+}
+
+
+/* =========================================================
+   AFSLUITING
+   ========================================================= */
+
+.juan-closing {
+    padding: 45px 0 50px;
+    text-align: center;
+    border-top: 1px solid var(--primary-color);
+}
+
+.juan-closing h2 {
+    margin: 0 0 18px;
+}
+
+.juan-closing p {
+    max-width: 900px;
+    margin: 0 auto 28px;
+    line-height: 1.7;
+}
+
+.juan-closing a.button {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.juan-closing a.button:hover {
+    background-color: var(--primary-color);
+    color: #3d2a00;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.juan-page .juan-footer {
+    padding: 10px 5px;
+
+    background: #4a3500;
+    border-top: 1px solid rgba(220, 175, 45, 0.35);
+
+    text-align: center;
+}
+
+.juan-footer-inner {
+    width: min(700px, 100%);
+    margin: 0 auto;
+}
+
+.juan-footer img {
+    display: block;
+    width: 130px;
+    height: auto;
+    margin: 0 auto 25px;
+}
+
+.juan-footer p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   MOBIEL
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .juan-page .juan-header {
+        height: auto;
+    }
+
+    .juan-page .juan-header-inner {
+        width: calc(100% - 30px);
+        padding: 12px 0;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .juan-page .juan-logo img {
+        width: 220px;
+        max-height: 60px;
+    }
+
+    .juan-page .juan-nav {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .juan-page .juan-nav a {
+        font-size: 14px;
+    }
+
+    .juan-intro {
+        padding: 55px 0 70px;
+    }
+
+    .juan-intro-inner {
+        width: calc(100% - 30px);
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .juan-intro-image {
+        width: min(380px, 100%);
+        margin: 0 auto;
+    }
+
+    .juan-intro-image img {
+        width: 100%;
+        height: 440px;
+    }
+
+    .juan-intro-text {
+        max-width: none;
+    }
+
+    .juan-intro-text h1 {
+        font-size: 48px;
+    }
+
+    .juan-story,
+    .juan-feature,
+    .juan-identity,
+    .juan-lucia {
+        padding: 60px 0;
+    }
+
+    .juan-story-inner,
+    .juan-feature-inner,
+    .juan-identity-inner,
+    .juan-lucia-inner {
+        width: calc(100% - 30px);
+    }
+
+    .juan-page h2 {
+        font-size: 35px;
+    }
+
+    .juan-page p {
+        font-size: 16px;
+    }
+}
+
+/* LUCÍA MARÍN */
+
+.lucia-section {
+    padding: 80px 0;
+}
+
+.lucia-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.lucia-image img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+    border-radius: 3px;
+}
+
+.lucia-text {
+    max-width: 600px;
+}
+
+.lucia-text .eyebrow {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.lucia-text h2 {
+    margin: 0 0 28px;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    line-height: 1.15;
+}
+
+.lucia-text p {
+    margin: 0 0 20px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+    .lucia-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 0 25px;
+    }
+
+    .lucia-image img {
+        height: 420px;
+    }
+
+    .lucia-text h2 {
+        font-size: 34px;
+    }
+}
+
+/* COMPACTERE VERTICALE RUIMTE */
+
+section {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Juan intro */
+.hero-section {
+    padding-top: 55px;
+    padding-bottom: 45px;
+}
+
+/* Tekstblokken */
+.content {
+    margin-bottom: 30px;
+}
+
+.content h2,
+.content h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.content p {
+    margin-bottom: 16px;
+}
+
+/* Lucia */
+.lucia-section {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+/* Footer */
+footer {
+    padding-top: 45px;
+    padding-bottom: 40px;
+}
+
+footer img {
+    margin-bottom: 25px;
+}
+
+footer p {
+    margin-bottom: 16px;
+}
+
+/* =========================================
+   COMPACTE LAYOUT - LAATSTE OVERRIDE
+   ========================================= */
+
+header {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+section,
+.hero-section,
+.lucia-section {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.hero-section {
+    min-height: 0 !important;
+}
+
+.hero-content {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.lucia-section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.lucia-content {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Tekst */
+.content {
+    margin-top: 0 !important;
+    margin-bottom: 25px !important;
+}
+
+.content h2,
+.content h3 {
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+.content p {
+    margin-top: 0 !important;
+    margin-bottom: 14px !important;
+}
+
+/* Divider voor de muziekpagina */
+.music-divider {
+    width: 80%;
+    height: 2px;
+    margin: 10px 0;
+    background: currentColor;
+}
+
+/* FOOTER COMPACT */
+footer {
+    padding: 35px 20px !important;
+    margin-top: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+footer .container,
+.footer .container {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+footer img {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+footer p,
+footer div {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+/* FOOTER - COMPACT */
+
+footer {
+    padding: 20px !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+footer .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+footer .footer-logo {
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+footer .footer-logo img {
+    display: block !important;
+    width: 120px !important;
+    height: auto !important;
+    margin: 0 !important;
+}
+
+footer .footer-info {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+footer .footer-info p {
+    margin: 0 0 6px 0 !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+}
+
+footer .footer-info p:last-child {
+    margin-bottom: 0 !important;
 }
