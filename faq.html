@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>F.A.Q. | Juan Solé | Veelgestelde vragen</title>
+    <meta name="description" content="Veelgestelde vragen over Juan Solé, de virtuele AI-artiest, zijn muziek en het gebruik van AI.">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<a href="#" class="back-to-top" aria-label="Terug naar boven">↑</a>
+
+<header>
+    <div class="container">
+        <div class="logo" style="display: flex; align-items: center;">
+            <img src="img/header2.png" height="70" alt="Juan Solé logo">
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu openen">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <nav id="main-nav">
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="juan.html">Juan</a></li>
+                <li><a href="muziek.html">Muziek</a></li>
+                <li><a href="foto-video.html">Foto en Video</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html" class="active">F.A.Q.</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="section">
+        <div class="container">
+
+            <h1>Veelgestelde vragen</h1>
+
+            <div class="faq-item">
+                <h3>Op welke streamingdiensten is Juan Solé te beluisteren?</h3>
+                <p>
+                    Nieuwe releases verschijnen op de bekende streamingplatforms,
+                    waaronder Spotify, Apple Music, YouTube Music, Amazon Music en
+                    vele andere diensten.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Komen er regelmatig nieuwe nummers?</h3>
+                <p>
+                    Ja. Juan Solé is een voortdurend groeiend project.
+                    Regelmatig verschijnen nieuwe singles, videoclips, foto's en verhalen
+                    die de wereld van Juan Solé verder uitbreiden.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Waarom lijken Juan Solé en Lucía Marín altijd hetzelfde?</h3>
+                <p>
+                    Hun uiterlijk is bewust vastgelegd. Daardoor blijven zij in iedere
+                    afbeelding, videoclip en albumcover direct herkenbaar.
+                    Die consistente stijl is een belangrijk onderdeel van hun identiteit.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Waarom wordt AI gebruikt?</h3>
+                <p>
+                    Omdat het nieuwe creatieve mogelijkheden biedt. Dankzij AI kunnen
+                    muziek, beeld en verhalen op een unieke manier samenkomen.
+                    Het doel is niet om technologie centraal te stellen, maar om een
+                    herkenbare artiest en een geloofwaardige wereld te creëren waarin
+                    iedere nieuwe productie voortbouwt op dezelfde identiteit.
+                </p>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-logo">
+            <img src="img/footer_logo.png" alt="Juan Solé Logo">
+        </div>
+
+        <div class="footer-info">
+            <p><a href="mailto:juansole@ziggo.nl">Email: juansole@ziggo.nl</a></p>
+            <p>&copy; All rights reserved 2026</p>
+            <p>Site development by Ocean Multimedia, layout by Jan en Dylan van der Kuijl.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+const backToTop = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTop.classList.add('show');
+    } else {
+        backToTop.classList.remove('show');
+    }
+});
+
+backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+</script>
+
+</body>
+</html>

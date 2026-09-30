@@ -1254,3 +1254,91 @@ footer .footer-info p {
 footer .footer-info p:last-child {
     margin-bottom: 0 !important;
 }
+
+.language-text {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+
+.language-flag {
+    width: 22px;
+    height: auto;
+    margin-right: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.language-text span {
+    line-height: 1.6;
+}
+.language-line {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+
+.language-line img {
+    width: 22px;
+    height: auto;
+    margin-right: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.language-line div {
+    line-height: 1.6;
+}
+.contact-email {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.email-line {
+    width: 80%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.35);
+    margin: 0 auto 18px auto;
+}
+
+.contact-email a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
+.contact-label {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.contact-label span {
+    margin: 0 10px;
+    opacity: 0.8;
+}
+/* Foto en Video - Juan Solé */
+.media-page{min-height:60vh}
+.media-intro{text-align:center;padding:55px 0 35px}
+.media-intro h1{color:var(--primary-color);font-size:2.2rem;margin-bottom:15px}
+.media-intro p{max-width:760px;margin:0 auto;line-height:1.7}
+.media-divider{width:80%;max-width:850px;height:2px;background:var(--primary-color);margin:0 auto 25px}
+.media-section{padding:35px 0}
+.media-section h2{color:var(--primary-color);margin-bottom:25px}
+.media-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.media-photo{display:block;height:320px;overflow:hidden;border-radius:var(--border-radius);background:#3f2f00;box-shadow:0 3px 10px rgba(0,0,0,.15)}
+.media-photo img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.media-photo:hover img{transform:scale(1.04)}
+.media-videos{border-top:1px solid rgba(212,175,55,.45);margin-top:15px}
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.video-card{background:#3f2f00;padding:10px;border-radius:var(--border-radius)}
+.video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.video-container iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:var(--border-radius)}
+.video-note{text-align:center;margin:25px 0 0;opacity:.85}
+@media(max-width:768px){.media-gallery{grid-template-columns:1fr}.media-photo{height:360px}.video-grid{grid-template-columns:1fr}.media-intro h1{font-size:1.9rem}}
