@@ -19,6 +19,7 @@
 <meta name="twitter:image" content="https://juansole.nl/img/piedritas600.png">
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="juan-page music-page">
 <a href="#" class="back-to-top" aria-label="Terug naar boven">↑</a>
 
@@ -80,7 +81,7 @@
           <div class="release-info"><span class="release-type">SINGLE</span><h3>Besos en El Puerto</h3><p>Een zomers verhaal aan de haven.</p>
 		  <div class="release-actions"><a href="https://open.spotify.com/track/65gh0p4ddd00BzCgkbGthp?si=79027145262a451e" target="_blank" rel="noopener">Spotify</a>
 		  <a href="https://music.apple.com/nl/album/besos-en-el-puerto-single/6778952921" target="_blank" rel="noopener">Apple Music</a>
-		  <a href="#" target="_blank" rel="noopener">YouTube</a></div></div>
+		  <a href="https://youtu.be/Hn53yxrOIww?si=pVQ8j_5GWOkVekDR" target="_blank" rel="noopener">YouTube</a></div></div>
         </article>
 
         <article class="release-card">
@@ -88,7 +89,7 @@
           <div class="release-info"><span class="release-type">SINGLE</span><h3>Bésame Lento</h3><p>Een romantische avond aan zee.</p>
 		  <div class="release-actions"><a href="https://open.spotify.com/track/31ST2CnxhCwQ3A0AIZAZSq?si=c4919677525b4519" target="_blank" rel="noopener">Spotify</a>
 		  <a href="https://music.apple.com/nl/album/b%C3%A9same-lento-single/6789243081" target="_blank" rel="noopener">Apple Music</a>
-		  <a href="#" target="_blank" rel="noopener">YouTube</a></div></div>
+		  <a href="https://youtu.be/kIADQtlzUew?si=Jezc7U3NcLROGRYC" target="_blank" rel="noopener">YouTube</a></div></div>
         </article>
 
         <article class="release-card">
@@ -158,6 +159,36 @@ window.addEventListener('scroll',()=>{ if(window.scrollY>300) backToTop.classLis
 backToTop.addEventListener('click',e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
 const toggle=document.getElementById('menu-toggle'); const nav=document.getElementById('nav-list');
 if(toggle) toggle.addEventListener('click',()=>nav.classList.toggle('active'));
+
+function openVideo(videoId) {
+    const modal = document.getElementById('videoModal');
+    const frame = document.getElementById('videoFrame');
+
+    frame.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeVideo() {
+    const modal = document.getElementById('videoModal');
+    const frame = document.getElementById('videoFrame');
+
+    modal.classList.remove('active');
+    frame.src = '';
+    document.body.style.overflow = '';
+}
+
+document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeVideo();
+    }
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeVideo();
+    }
+});
 </script>
 </body>
 </html>
