@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Solé | Virtuele AI-artiest</title>
+    <title data-i18n="pageTitle">Juan Solé | Virtuele AI-artiest</title>
     <meta name="description" content="Juan Solé is een virtuele AI-artiest met een mediterrane identiteit. Ontdek zijn muziek, verhalen, beelden en artistieke wereld.">
     <link rel="canonical" href="https://juansole.nl/juan.html">
 	<meta property="og:type" content="website">
@@ -59,12 +59,19 @@ backToTop.addEventListener('click', (e) => {
 
         <nav id="main-nav">
             <ul class="nav-list" id="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="juan.html" class="active">Juan</a></li>
-				<li><a href="muziek.html">Muziek</a></li>
-               <li><a href="foto-video.html">Foto en Video</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-               <li><a href="faq.html">F.A.Q.</a></li>
+                <li><a href="index.html" data-i18n="navHome">Home</a></li>
+                <li><a href="juan.html" class="active" data-i18n="navJuan">Juan</a></li>
+				<li><a href="muziek.html" data-i18n="navMusic">Muziek</a></li>
+               <li><a href="foto-video.html" data-i18n="navPhotos">Foto en Video</a></li>
+                <li><a href="index.html#contact" data-i18n="navContact">Contact</a></li>
+               <li><a href="faq.html" data-i18n="navFaq">F.A.Q.</a></li>
+                <li class="language-switch" aria-label="Taal kiezen">
+                    <button type="button" class="lang-btn active" data-lang="nl" aria-pressed="true">NL</button>
+                    <span aria-hidden="true">|</span>
+                    <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+                    <span aria-hidden="true">|</span>
+                    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                </li>
             </ul>
         </nav>
     </div>
@@ -91,36 +98,28 @@ backToTop.addEventListener('click', (e) => {
                     JUAN SOLÉ
                 </div>
 
-                <h1>
-                    Een nieuwe stem uit de Méditerranée
-                </h1>
+                <h1 data-i18n="heroTitle">Een nieuwe stem uit de Méditerranée</h1>
 
                 <div class="juan-divider"></div>
 
                 <p class="juan-lead">
                     <div class="juan-lead">
 
-    <p>
-        Juan Solé is een virtuele artiest die is ontstaan uit een combinatie
+    <p data-i18n="introP1">Juan Solé is een virtuele artiest die is ontstaan uit een combinatie
         van menselijke creativiteit en moderne AI-technologie. Achter de
         muziek, beelden en verhalen zit een duidelijke artistieke visie:
-        een herkenbare wereld creëren waarin alles met elkaar verbonden is.
-    </p>
+        een herkenbare wereld creëren waarin alles met elkaar verbonden is.</p>
 
-    <p>
-        De inspiratie komt uit de mediterrane sfeer van Zuid-Spanje.
+    <p data-i18n="introP2">De inspiratie komt uit de mediterrane sfeer van Zuid-Spanje.
         Zon, zee, boulevards, witte dorpen, muziek, terrassen en lange
         zomeravonden vormen het decor van zijn wereld. Soms staat een
         herinnering centraal, soms een gevoel of een eenvoudig moment
-        dat het verhaal van een nummer bepaalt.
-    </p>
-  <p>
-        Hij is daarom meer dan alleen een naam bij een muziekrelease.
+        dat het verhaal van een nummer bepaalt.</p>
+    <p data-i18n="introP3">Hij is daarom meer dan alleen een naam bij een muziekrelease.
         Zijn uiterlijk, muziek, fotografie en videowereld vormen samen één
         herkenbare identiteit. Iedere nieuwe productie voegt een nieuw
         hoofdstuk toe aan die wereld, zonder de herkenbaarheid van het
-        karakter te verliezen.
-    </p>
+        karakter te verliezen.</p>
    
 
 </div>
@@ -141,15 +140,11 @@ backToTop.addEventListener('click', (e) => {
 
         <div class="juan-story-inner">
 
-            <div class="juan-section-label">
-                HET VERHAAL
-            </div>
+            <div class="juan-section-label" data-i18n="storyLabel">HET VERHAAL</div>
 
-            <h2>
-                Wie is Juan Solé?
-            </h2>
+            <h2 data-i18n="whoTitle">Wie is Juan Solé?</h2>
 
-            <p>
+            <p data-i18n="storyText">
                 Juan Solé is een volledig digitale artiest, ontstaan uit
                 een combinatie van menselijke creativiteit en moderne
                 AI-technologie. Hij bestaat niet in de fysieke wereld,
@@ -182,15 +177,11 @@ backToTop.addEventListener('click', (e) => {
 
             <div class="juan-feature-text">
 
-                <div class="juan-section-label">
-                    ARTISTIEKE VISIE
-                </div>
+                <div class="juan-section-label" data-i18n="visionLabel">ARTISTIEKE VISIE</div>
 
-                <h2>
-                    Een virtuele artiest
-                </h2>
+                <h2 data-i18n="virtualTitle">Een virtuele artiest</h2>
 
-                <p>
+                <p data-i18n="virtualText">
                     Juan Solé wordt ontwikkeld vanuit een duidelijke
                     artistieke visie. AI is daarbij een hulpmiddel voor
                     het creëren van muziek, beelden en verhalen, maar
@@ -220,15 +211,11 @@ backToTop.addEventListener('click', (e) => {
 
         <div class="juan-identity-inner">
 
-            <div class="juan-section-label">
-                HERKENNING
-            </div>
+            <div class="juan-section-label" data-i18n="identityLabel">HERKENNING</div>
 
-            <h2>
-                Een herkenbare identiteit
-            </h2>
+            <h2 data-i18n="identityTitle">Een herkenbare identiteit</h2>
 
-            <p>
+            <p data-i18n="identityText">
                 Het uiterlijk van Juan Solé is geen toeval. Zijn complete
                 verschijning is zorgvuldig ontworpen als onderdeel van
                 zijn artistieke identiteit. Van zijn gezicht, kapsel en
@@ -260,32 +247,12 @@ backToTop.addEventListener('click', (e) => {
             </div>
 
             <div class="lucia-text">
-                               <h2>Lucía Marín</h2>
+                               <h2 data-i18n="luciaTitle">Lucía Marín</h2>
 
-                <p>
-                    Lucía Marín is een belangrijk onderdeel van de wereld rond Juan Solé.
-                    Zij is niet zomaar een personage naast hem, maar heeft haar eigen
-                    uitstraling, karakter en verhaal.
-                </p>
-
-                <p>
-                    Haar warme mediterrane uitstraling sluit natuurlijk aan bij de wereld
-                    van Juan Solé. Elegant, zelfverzekerd en met een rustige natuurlijke
-                    schoonheid vormt Lucía een herkenbaar gezicht binnen de verhalen,
-                    foto's en video's die rond de muziek ontstaan.
-                </p>
-
-                <p>
-                    In sommige verhalen is zij zijn reisgenoot, in andere zijn muze of
-                    degene met wie een bijzonder moment wordt gedeeld. Daarmee krijgt
-                    Lucía een eigen plaats binnen de artistieke wereld van Juan Solé.
-                </p>
-
-                <p>
-                    Net als Juan blijft haar uiterlijk consequent herkenbaar. Daardoor
-                    ontstaat niet alleen continuïteit, maar ook het gevoel dat beide
-                    personages werkelijk onderdeel zijn van dezelfde wereld.
-                </p>
+                <p data-i18n="luciaP1">Lucía Marín is een belangrijk onderdeel van de wereld rond Juan Solé. Zij is niet zomaar een personage naast hem, maar heeft haar eigen uitstraling, karakter en verhaal.</p>
+                <p data-i18n="luciaP2">Haar warme mediterrane uitstraling sluit natuurlijk aan bij de wereld van Juan Solé. Elegant, zelfverzekerd en met een rustige natuurlijke schoonheid vormt Lucía een herkenbaar gezicht binnen de verhalen, foto's en video's die rond de muziek ontstaan.</p>
+                <p data-i18n="luciaP3">In sommige verhalen is zij zijn reisgenoot, in andere zijn muze of degene met wie een bijzonder moment wordt gedeeld. Daarmee krijgt Lucía een eigen plaats binnen de artistieke wereld van Juan Solé.</p>
+                <p data-i18n="luciaP4">Net als Juan blijft haar uiterlijk consequent herkenbaar. Daardoor ontstaat niet alleen continuïteit, maar ook het gevoel dat beide personages werkelijk onderdeel zijn van dezelfde wereld.</p>
             </div>
 
         </div>
@@ -299,17 +266,11 @@ backToTop.addEventListener('click', (e) => {
 
     <section class="juan-closing">
     <div class="container">
-        <h2>Een wereld die blijft groeien</h2>
+        <h2 data-i18n="closingTitle">Een wereld die blijft groeien</h2>
 
-        <p>
-            Juan Solé blijft zich ontwikkelen. Nieuwe muziek, beelden en verhalen
-            voegen steeds nieuwe hoofdstukken toe aan dezelfde mediterrane wereld.
-            Wat begon met een idee tijdens een vakantie in Andalusië groeit uit tot
-            een herkenbaar artistiek project waarin muziek, beeld en verhaal
-            samenkomen.
-        </p>
+        <p data-i18n="closingText">Juan Solé blijft zich ontwikkelen. Nieuwe muziek, beelden en verhalen voegen steeds nieuwe hoofdstukken toe aan dezelfde mediterrane wereld. Wat begon met een idee tijdens een vakantie in Andalusië groeit uit tot een herkenbaar artistiek project waarin muziek, beeld en verhaal samenkomen.</p>
 
-        <a href="muziek.html" class="button">Ontdek de muziek</a>
+        <a href="muziek.html" class="button" data-i18n="discoverMusic">Ontdek de muziek</a>
     </div>
 </section>
 
@@ -322,12 +283,256 @@ backToTop.addEventListener('click', (e) => {
                 <img src="img/footer_logo.png" alt="Juan Solé Logo">
             </div>
             <div class="footer-info">
-                <p><a href="mailto:juansole@ziggo.nl">Email: juansole@ziggo.nl</a></p>
-                <p>&copy; All rights reserved 2026</p>
-                <p>Site development by Ocean Multimedia, layout by Jan en Dylan van der Kuijl.</p>
+                <p><a href="mailto:juansole@ziggo.nl"><span data-i18n="emailLabel">Email</span>: juansole@ziggo.nl</a></p>
+                <p>&copy; <span data-i18n="rights">All rights reserved</span> 2026</p>
+                <p data-i18n="credits">Site development by Ocean Multimedia, layout by Jan en Dylan van der Kuijl.</p>
             </div>
         </div>
     </footer>
+
+
+<style>
+.language-switch { display:flex; align-items:center; gap:7px; }
+.language-switch .lang-btn { background:transparent; border:0; color:inherit; font:inherit; cursor:pointer; padding:6px 2px; }
+.language-switch .lang-btn.active { font-weight:700; text-decoration:underline; text-underline-offset:5px; }
+</style>
+<script>
+(function () {
+    const translations = {
+        nl: {
+            pageTitle:"Juan Solé | Virtuele AI-artiest",
+            navHome:"Home", navJuan:"Juan", navMusic:"Muziek", navPhotos:"Foto en Video", navContact:"Contact", navFaq:"F.A.Q.",
+            heroTitle:"Een nieuwe stem uit de Méditerranée", storyLabel:"HET VERHAAL", whoTitle:"Wie is Juan Solé?",
+            visionLabel:"ARTISTIEKE VISIE", virtualTitle:"Een virtuele artiest", identityLabel:"HERKENNING",
+            identityTitle:"Een herkenbare identiteit", luciaTitle:"Lucía Marín", closingTitle:"Een wereld die blijft groeien",
+            discoverMusic:"Ontdek de muziek", emailLabel:"Email", rights:"Alle rechten voorbehouden",
+            credits:"Website ontwikkeld door Ocean Multimedia, vormgeving door Jan en Dylan van der Kuijl.",
+            introP1:"Juan Solé is een virtuele artiest die is ontstaan uit een combinatie van menselijke creativiteit en moderne AI-technologie. Achter de muziek, beelden en verhalen zit een duidelijke artistieke visie: een herkenbare wereld creëren waarin alles met elkaar verbonden is.",
+            introP2:"De inspiratie komt uit de mediterrane sfeer van Zuid-Spanje. Zon, zee, boulevards, witte dorpen, muziek, terrassen en lange zomeravonden vormen het decor van zijn wereld. Soms staat een herinnering centraal, soms een gevoel of een eenvoudig moment dat het verhaal van een nummer bepaalt.",
+            introP3:"Hij is daarom meer dan alleen een naam bij een muziekrelease. Zijn uiterlijk, muziek, fotografie en videowereld vormen samen één herkenbare identiteit. Iedere nieuwe productie voegt een nieuw hoofdstuk toe aan die wereld, zonder de herkenbaarheid van het karakter te verliezen.",
+            storyText:"Juan Solé is een volledig digitale artiest, ontstaan uit een combinatie van menselijke creativiteit en moderne AI-technologie. Hij bestaat niet in de fysieke wereld, maar zijn muziek, uitstraling en verhalen vormen samen een herkenbare artistieke identiteit.\n\nJuan Solé is meer dan alleen muziek. Iedere foto, videoclip, albumcover en socialmedia-post maakt deel uit van dezelfde wereld. Muziek, fotografie en kunst versterken elkaar en vertellen samen één verhaal.\n\nAchter ieder nummer schuilt een idee, een herinnering of een gevoel. Soms is dat een zonsondergang aan de Middellandse Zee, een wandeling door Sevilla of een ontmoeting in een sfeervol Spaans dorp.",
+            virtualText:"Juan Solé wordt ontwikkeld vanuit een duidelijke artistieke visie. AI is daarbij een hulpmiddel voor het creëren van muziek, beelden en verhalen, maar vormt niet het doel op zich.\n\nDe inspiratie, sfeer, emoties en artistieke keuzes staan centraal. Iedere productie krijgt de stijl die het verhaal het beste ondersteunt.\n\nZijn muziek ademt de sfeer van Andalusië: zon, zee, witte dorpjes, flamenco, tapas, terrassen en warme zomeravonden.",
+            identityText:"Het uiterlijk van Juan Solé is geen toeval. Zijn complete verschijning is zorgvuldig ontworpen als onderdeel van zijn artistieke identiteit. Van zijn gezicht, kapsel en baard tot zijn kledingstijl en uitstraling: ieder detail is bewust vastgelegd.\n\nDaardoor blijft Juan Solé in alle afbeeldingen, video's en andere media dezelfde herkenbare persoonlijkheid. Of hij nu over de boulevard van Málaga wandelt, door de straatjes van Sevilla loopt of op een podium staat, zijn karakteristieke uiterlijk blijft consistent.",
+            luciaP1:"Lucía Marín is een belangrijk onderdeel van de wereld rond Juan Solé. Zij is niet zomaar een personage naast hem, maar heeft haar eigen uitstraling, karakter en verhaal.",
+            luciaP2:"Haar warme mediterrane uitstraling sluit natuurlijk aan bij de wereld van Juan Solé. Elegant, zelfverzekerd en met een rustige natuurlijke schoonheid vormt Lucía een herkenbaar gezicht binnen de verhalen, foto's en video's die rond de muziek ontstaan.",
+            luciaP3:"In sommige verhalen is zij zijn reisgenoot, in andere zijn muze of degene met wie een bijzonder moment wordt gedeeld. Daarmee krijgt Lucía een eigen plaats binnen de artistieke wereld van Juan Solé.",
+            luciaP4:"Net als Juan blijft haar uiterlijk consequent herkenbaar. Daardoor ontstaat niet alleen continuïteit, maar ook het gevoel dat beide personages werkelijk onderdeel zijn van dezelfde wereld.",
+            closingText:"Juan Solé blijft zich ontwikkelen. Nieuwe muziek, beelden en verhalen voegen steeds nieuwe hoofdstukken toe aan dezelfde mediterrane wereld. Wat begon met een idee tijdens een vakantie in Andalusië groeit uit tot een herkenbaar artistiek project waarin muziek, beeld en verhaal samenkomen."
+        },
+        es: {
+            pageTitle:"Juan Solé | Artista virtual de IA",
+            navHome:"Inicio", navJuan:"Juan", navMusic:"Música", navPhotos:"Fotos y vídeos", navContact:"Contacto", navFaq:"Preguntas frecuentes",
+            heroTitle:"Una nueva voz del Mediterráneo", storyLabel:"LA HISTORIA", whoTitle:"¿Quién es Juan Solé?",
+            visionLabel:"VISIÓN ARTÍSTICA", virtualTitle:"Un artista virtual", identityLabel:"IDENTIDAD",
+            identityTitle:"Una identidad reconocible", luciaTitle:"Lucía Marín", closingTitle:"Un mundo que sigue creciendo",
+            discoverMusic:"Descubre la música", emailLabel:"Correo electrónico", rights:"Todos los derechos reservados",
+            credits:"Desarrollo web por Ocean Multimedia; diseño por Jan y Dylan van der Kuijl.",
+            introP1:"Juan Solé es un artista virtual nacido de la combinación de la creatividad humana y la tecnología moderna de inteligencia artificial. Detrás de su música, sus imágenes y sus historias hay una visión artística clara: crear un mundo reconocible en el que todo esté conectado.",
+            introP2:"La inspiración procede del ambiente mediterráneo del sur de España. El sol, el mar, los paseos marítimos, los pueblos blancos, la música, las terrazas y las largas noches de verano forman el escenario de su mundo. A veces el centro es un recuerdo; otras, una emoción o un instante sencillo que da forma a la historia de una canción.",
+            introP3:"Por eso es mucho más que un nombre asociado a un lanzamiento musical. Su aspecto, su música, la fotografía y el universo visual de sus vídeos forman una identidad reconocible. Cada nueva producción añade un capítulo a ese mundo sin perder la esencia del personaje.",
+            storyText:"Juan Solé es un artista completamente digital, creado mediante la combinación de la creatividad humana y la tecnología moderna de IA. No existe en el mundo físico, pero su música, su imagen y sus historias forman una identidad artística reconocible.\n\nJuan Solé es mucho más que música. Cada fotografía, videoclip, portada de álbum y publicación en redes sociales forma parte del mismo universo. La música, la fotografía y el arte se refuerzan mutuamente y cuentan una sola historia.\n\nDetrás de cada canción hay una idea, un recuerdo o una emoción. Puede ser una puesta de sol en el Mediterráneo, un paseo por Sevilla o un encuentro en un encantador pueblo español.",
+            virtualText:"Juan Solé se desarrolla a partir de una visión artística clara. La IA es una herramienta para crear música, imágenes e historias, pero no es un fin en sí misma.\n\nLa inspiración, el ambiente, las emociones y las decisiones artísticas son lo más importante. Cada producción adopta el estilo que mejor acompaña a la historia.\n\nSu música respira el ambiente de Andalucía: sol, mar, pueblos blancos, flamenco, tapas, terrazas y cálidas noches de verano.",
+            identityText:"El aspecto de Juan Solé no es casual. Su imagen completa ha sido diseñada cuidadosamente como parte de su identidad artística. Desde el rostro, el peinado y la barba hasta la ropa y la expresión, cada detalle se ha definido de forma deliberada.\n\nAsí, Juan Solé mantiene una apariencia reconocible en todas las imágenes, vídeos y demás medios. Tanto si pasea por el paseo marítimo de Málaga, recorre las calles de Sevilla o está sobre un escenario, su aspecto característico permanece coherente.",
+            luciaP1:"Lucía Marín es una parte importante del mundo de Juan Solé. No es simplemente un personaje a su lado: tiene su propia presencia, personalidad e historia.",
+            luciaP2:"Su cálida imagen mediterránea encaja de forma natural en el mundo de Juan Solé. Elegante, segura de sí misma y de belleza natural y serena, Lucía es una presencia reconocible en las historias, fotografías y vídeos que nacen alrededor de la música.",
+            luciaP3:"En algunas historias es su compañera de viaje; en otras, su musa o la persona con quien comparte un momento especial. Así, Lucía ocupa un lugar propio en el universo artístico de Juan Solé.",
+            luciaP4:"Al igual que Juan, su aspecto se mantiene coherente y reconocible. Esto aporta continuidad y hace sentir que ambos personajes forman parte del mismo mundo.",
+            closingText:"Juan Solé sigue evolucionando. La nueva música, las imágenes y las historias añaden capítulos al mismo universo mediterráneo. Lo que comenzó como una idea durante unas vacaciones en Andalucía se está convirtiendo en un proyecto artístico reconocible en el que se unen música, imagen e historia."
+        },
+        en: {
+            pageTitle:"Juan Solé | Virtual AI Artist",
+            navHome:"Home", navJuan:"Juan", navMusic:"Music", navPhotos:"Photos & Video", navContact:"Contact", navFaq:"FAQ",
+            heroTitle:"A New Voice from the Mediterranean", storyLabel:"THE STORY", whoTitle:"Who is Juan Solé?",
+            visionLabel:"ARTISTIC VISION", virtualTitle:"A Virtual Artist", identityLabel:"RECOGNITION",
+            identityTitle:"A Recognisable Identity", luciaTitle:"Lucía Marín", closingTitle:"A World That Keeps Growing",
+            discoverMusic:"Discover the Music", emailLabel:"Email", rights:"All rights reserved",
+            credits:"Website development by Ocean Multimedia; design by Jan and Dylan van der Kuijl.",
+            introP1:"Juan Solé is a virtual artist born from a combination of human creativity and modern AI technology. Behind the music, images and stories is a clear artistic vision: to create a distinctive world in which everything is connected.",
+            introP2:"His inspiration comes from the Mediterranean atmosphere of southern Spain. Sun, sea, promenades, whitewashed villages, music, terraces and long summer evenings form the backdrop to his world. Sometimes a memory takes centre stage; at other times, it is a feeling or a simple moment that shapes a song's story.",
+            introP3:"He is therefore more than just a name on a music release. His appearance, music, photography and video world come together to form a recognisable identity. Each new production adds another chapter without losing the character's familiar essence.",
+            storyText:"Juan Solé is a fully digital artist, created through a combination of human creativity and modern AI technology. He does not exist in the physical world, but his music, image and stories form a distinctive artistic identity.\n\nJuan Solé is about more than music. Every photograph, music video, album cover and social media post belongs to the same world. Music, photography and art reinforce one another and tell a single story.\n\nEvery song begins with an idea, a memory or a feeling. It might be a sunset over the Mediterranean, a walk through Seville or a meeting in a charming Spanish village.",
+            virtualText:"Juan Solé is developed around a clear artistic vision. AI is a tool for creating music, images and stories, but it is not an end in itself.\n\nInspiration, atmosphere, emotion and artistic choices come first. Each production adopts the style that best supports its story.\n\nHis music captures the spirit of Andalusia: sun, sea, whitewashed villages, flamenco, tapas, terraces and warm summer evenings.",
+            identityText:"Juan Solé's appearance is no accident. His complete look has been carefully designed as part of his artistic identity. From his face, hairstyle and beard to his clothing and overall presence, every detail has been deliberately defined.\n\nThis keeps Juan Solé recognisable across images, videos and other media. Whether he is walking along Málaga's promenade, exploring the streets of Seville or standing on stage, his distinctive appearance remains consistent.",
+            luciaP1:"Lucía Marín is an important part of the world around Juan Solé. She is not simply a character beside him; she has her own presence, personality and story.",
+            luciaP2:"Her warm Mediterranean look fits naturally into Juan Solé's world. Elegant, confident and naturally beautiful, Lucía is a familiar face in the stories, photographs and videos created around the music.",
+            luciaP3:"In some stories she is his travel companion; in others, his muse or the person with whom he shares a special moment. Lucía therefore has her own place in Juan Solé's artistic world.",
+            luciaP4:"Like Juan, her appearance remains consistent and recognisable. This creates continuity and makes both characters feel like genuine parts of the same world.",
+            closingText:"Juan Solé continues to evolve. New music, images and stories add fresh chapters to the same Mediterranean world. What began as an idea during a holiday in Andalusia is growing into a distinctive artistic project where music, imagery and storytelling come together."
+        }
+    };
+
+    function setLanguage(lang) {
+        const chosen = translations[lang] ? lang : "nl";
+        document.documentElement.lang = chosen;
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+            const key = el.getAttribute("data-i18n");
+            if (translations[chosen][key] !== undefined) {
+                el.textContent = translations[chosen][key];
+                el.style.whiteSpace = "pre-line";
+            }
+        });
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+            const active = btn.dataset.lang === chosen;
+            btn.classList.toggle("active", active);
+            btn.setAttribute("aria-pressed", String(active));
+        });
+        document.title = translations[chosen].pageTitle;
+        const descriptions = {
+            nl:"Juan Solé is een virtuele AI-artiest met een mediterrane identiteit. Ontdek zijn muziek, verhalen, beelden en artistieke wereld.",
+            es:"Juan Solé es un artista virtual de IA con identidad mediterránea. Descubre su música, sus historias, imágenes y universo artístico.",
+            en:"Juan Solé is a virtual AI artist with a Mediterranean identity. Discover his music, stories, imagery and artistic world."
+        };
+        const desc = document.querySelector('meta[name="description"]');
+        if (desc) desc.setAttribute("content", descriptions[chosen]);
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", descriptions[chosen]);
+        const locale = document.querySelector('meta[property="og:locale"]');
+        if (locale) locale.setAttribute("content", chosen === "es" ? "es_ES" : chosen === "en" ? "en_GB" : "nl_NL");
+        try { localStorage.setItem("juansole-language", chosen); } catch(e) {}
+    }
+    document.querySelectorAll(".lang-btn").forEach(btn => btn.addEventListener("click", () => setLanguage(btn.dataset.lang)));
+    let initial = "nl";
+    try {
+        const saved = localStorage.getItem("juansole-language");
+        if (saved && translations[saved]) initial = saved;
+    } catch(e) {}
+    setLanguage(initial);
+})();
+</script>
+
+
+<style>
+/* Mobiel menu: gebruikt de bestaande werking uit script.js */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    padding: 8px;
+}
+.menu-toggle .bar {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+@media (max-width: 768px) {
+    header .container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    header .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+        z-index: 1001;
+    }
+    #main-nav {
+        display: flex;
+        width: 100%;
+        flex-basis: 100%;
+    }
+    #main-nav .nav-list {
+        position: fixed;
+        top: 78px;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        margin: 0;
+        padding: 8px 0 12px;
+        background-color: #3f2f00;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+    #main-nav .nav-list.active {
+        left: 0;
+    }
+    #main-nav .nav-list > li {
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+    #main-nav .nav-list > li > a {
+        display: block;
+        padding: 10px 22px;
+        color: #ffffff;
+    }
+    #main-nav .language-switch {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: auto;
+        padding: 8px 22px;
+        color: #ffffff;
+    }
+}
+@media (min-width: 769px) {
+    .menu-toggle { display: none !important; }
+    #main-nav { display: flex !important; }
+    #main-nav .nav-list { position: static; left: auto; }
+}
+</style>
+
+<script>
+/* Mobiel menu Juan Solé: zelfstandige werking voor deze pagina */
+(function () {
+    const toggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+    if (!toggle || !navList) return;
+
+    function setMenu(open) {
+        toggle.classList.toggle('active', open);
+        navList.classList.toggle('active', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        const bars = toggle.querySelectorAll('.bar');
+        if (bars.length >= 3) {
+            bars[0].style.transform = open ? 'rotate(-45deg) translate(-5px, 6px)' : 'none';
+            bars[1].style.opacity = open ? '0' : '1';
+            bars[2].style.transform = open ? 'rotate(45deg) translate(-5px, -6px)' : 'none';
+        }
+    }
+
+    toggle.setAttribute('type', 'button');
+    toggle.setAttribute('aria-label', 'Menu openen');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        setMenu(!navList.classList.contains('active'));
+    });
+
+    navList.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (window.innerWidth <= 768) setMenu(false);
+        });
+    });
+
+    document.addEventListener('click', function (event) {
+        if (window.innerWidth <= 768 && navList.classList.contains('active') &&
+            !navList.contains(event.target) && !toggle.contains(event.target)) {
+            setMenu(false);
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

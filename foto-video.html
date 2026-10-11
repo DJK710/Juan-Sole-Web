@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Foto en Video | Juan Solé</title>
+<title data-i18n="pageTitle">Foto en Video | Juan Solé</title>
 <meta name="description" content="Bekijk foto's en video's uit de wereld van Juan Solé, de virtuele AI-artiest met mediterrane invloeden.">
 <link rel="canonical" href="https://juansole.nl/foto-video.html">
 <link rel="stylesheet" href="styles.css">
@@ -24,12 +24,13 @@
 </div>
 <nav id="main-nav">
 <ul class="nav-list" id="nav-list">
-<li><a href="index.html">Home</a></li>
-<li><a href="juan.html">Juan</a></li>
-<li><a href="muziek.html">Muziek</a></li>
-<li><a href="foto-video.html" class="active">Foto en Video</a></li>
-<li><a href="contact.html">Contact</a></li>
- <li><a href="faq.html">F.A.Q.</a></li>
+<li><a href="index.html" data-i18n="navHome">Home</a></li>
+<li><a href="juan.html" data-i18n="navJuan">Juan</a></li>
+<li><a href="muziek.html" data-i18n="navMusic">Muziek</a></li>
+<li><a href="foto-video.html" class="active" data-i18n="navMedia">Foto en Video</a></li>
+<li><a href="contact.html" data-i18n="navContact">Contact</a></li>
+ <li><a href="faq.html" data-i18n="navFaq">F.A.Q.</a></li>
+ <li class="language-switch" aria-label="Taal kiezen"><button type="button" class="lang-btn active" data-lang="nl" aria-pressed="true">NL</button><span aria-hidden="true">|</span><button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button><span aria-hidden="true">|</span><button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button></li>
 </ul>
 </nav>
 </div>
@@ -39,15 +40,15 @@
 
 <section class="media-intro">
 <div class="container">
-<h1>Foto en Video</h1>
+<h1 data-i18n="mediaTitle">Foto en Video</h1>
 <div class="media-divider"></div>
-<p>Een verzameling beelden en video's uit de wereld van Juan Solé.</p>
+<p data-i18n="mediaIntro">Een verzameling beelden en video's uit de wereld van Juan Solé.</p>
 </div>
 </section>
 
 <section class="media-section">
 <div class="container">
-<h2>Foto's</h2>
+<h2 data-i18n="photosTitle">Foto's</h2>
 <div class="media-gallery">
 <a href="img/1.png" class="media-photo"><img src="img/1.png" alt="Juan Solé - Besame Lento" loading="lazy"></a>
 <a href="img/studio.png" class="media-photo"><img src="img/studio.png" alt="Juan Solé in de studio" loading="lazy"></a>
@@ -61,7 +62,7 @@
 
 <section class="media-section media-videos">
 <div class="container">
-<h2>Video</h2>
+<h2 data-i18n="videosTitle">Video</h2>
 <div class="video-grid">
 <div class="video-card"><div class="video-container">
 <iframe src="https://www.youtube.com/embed/PkkqgfCdXyY" title="Juan Solé video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -70,7 +71,7 @@
 <iframe src="https://www.youtube.com/embed/J4fG9112YGM" title="Juan Solé video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div></div>
 </div>
-<p class="video-note">Nieuwe video's worden hier toegevoegd zodra ze beschikbaar zijn.</p>
+<p class="video-note" data-i18n="videoNote">Nieuwe video's worden hier toegevoegd zodra ze beschikbaar zijn.</p>
 </div>
 </section>
 
@@ -87,11 +88,121 @@
 </div>
 </footer>
 
-<script src="script.js"></script>
 <script>
-const backToTop=document.querySelector('.back-to-top');
-window.addEventListener('scroll',()=>backToTop.classList.toggle('show',window.scrollY>300));
-backToTop.addEventListener('click',e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
+(function () {
+  const translations = {
+    nl: {
+      pageTitle: "Foto en Video | Juan Solé",
+      navHome: "Home", navJuan: "Juan", navMusic: "Muziek",
+      navMedia: "Foto en Video", navContact: "Contact", navFaq: "F.A.Q.",
+      mediaTitle: "Foto en Video",
+      mediaIntro: "Een verzameling beelden en video's uit de wereld van Juan Solé.",
+      photosTitle: "Foto's", videosTitle: "Video",
+      videoNote: "Nieuwe video's worden hier toegevoegd zodra ze beschikbaar zijn."
+    },
+    es: {
+      pageTitle: "Fotos y vídeos | Juan Solé",
+      navHome: "Inicio", navJuan: "Juan", navMusic: "Música",
+      navMedia: "Fotos y vídeos", navContact: "Contacto", navFaq: "Preguntas frecuentes",
+      mediaTitle: "Fotos y vídeos",
+      mediaIntro: "Una colección de imágenes y vídeos del mundo de Juan Solé.",
+      photosTitle: "Fotos", videosTitle: "Vídeos",
+      videoNote: "Aquí se añadirán nuevos vídeos cuando estén disponibles."
+    },
+    en: {
+      pageTitle: "Photos & Video | Juan Solé",
+      navHome: "Home", navJuan: "Juan", navMusic: "Music",
+      navMedia: "Photos & Video", navContact: "Contact", navFaq: "FAQ",
+      mediaTitle: "Photos & Video",
+      mediaIntro: "A collection of images and videos from the world of Juan Solé.",
+      photosTitle: "Photos", videosTitle: "Video",
+      videoNote: "New videos will be added here as they become available."
+    }
+  };
+
+  function setLanguage(lang) {
+    const chosen = translations[lang] ? lang : "nl";
+    document.documentElement.lang = chosen;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[chosen][key] !== undefined) el.textContent = translations[chosen][key];
+    });
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      const active = btn.dataset.lang === chosen;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-pressed", String(active));
+    });
+    document.title = translations[chosen].pageTitle;
+    const desc = {
+      nl: "Bekijk foto's en video's uit de wereld van Juan Solé, de virtuele AI-artiest met mediterrane invloeden.",
+      es: "Descubre fotos y vídeos del mundo de Juan Solé, el artista virtual de IA con influencias mediterráneas.",
+      en: "Explore photos and videos from the world of Juan Solé, the virtual AI artist with Mediterranean influences."
+    };
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", desc[chosen]);
+    try { localStorage.setItem("juansole-language", chosen); } catch (e) {}
+  }
+
+  document.querySelectorAll(".lang-btn").forEach(btn =>
+    btn.addEventListener("click", () => setLanguage(btn.dataset.lang))
+  );
+
+  let initial = "nl";
+  try {
+    const saved = localStorage.getItem("juansole-language");
+    if (saved && translations[saved]) initial = saved;
+  } catch (e) {}
+  setLanguage(initial);
+
+  const backToTop = document.querySelector(".back-to-top");
+  if (backToTop) {
+    window.addEventListener("scroll", () => backToTop.classList.toggle("show", window.scrollY > 300));
+    backToTop.addEventListener("click", e => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // Zelfstandige mobiele menufunctie, gelijk aan de werkende Juan-pagina.
+  const toggle = document.getElementById("menu-toggle");
+  const navList = document.getElementById("nav-list");
+  if (toggle && navList) {
+    function setMenu(open) {
+      toggle.classList.toggle("active", open);
+      navList.classList.toggle("active", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+      const bars = toggle.querySelectorAll(".bar");
+      if (bars.length >= 3) {
+        bars[0].style.transform = open ? "rotate(-45deg) translate(-5px, 6px)" : "none";
+        bars[1].style.opacity = open ? "0" : "1";
+        bars[2].style.transform = open ? "rotate(45deg) translate(-5px, -6px)" : "none";
+      }
+    }
+    toggle.type = "button";
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.addEventListener("click", e => {
+      e.preventDefault();
+      e.stopPropagation();
+      setMenu(!navList.classList.contains("active"));
+    });
+    navList.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      if (window.innerWidth <= 768) setMenu(false);
+    }));
+    document.addEventListener("click", e => {
+      if (window.innerWidth <= 768 && navList.classList.contains("active") &&
+          !navList.contains(e.target) && !toggle.contains(e.target)) setMenu(false);
+    });
+  }
+})();
 </script>
+<style>
+.language-switch { display:flex; align-items:center; gap:7px; margin-left:1.5rem; white-space:nowrap; color:#fff; }
+.language-switch .lang-btn { padding:4px 2px; border:0; background:transparent; color:#fff; font:inherit; font-size:13px; font-weight:700; cursor:pointer; }
+.language-switch .lang-btn.active, .language-switch .lang-btn:hover { color:#d8aa35; }
+@media (max-width:768px) {
+  .language-switch { justify-content:center; margin:10px 0 0; }
+}
+</style>
 </body>
 </html>

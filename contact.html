@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Solé | Virtuele AI-artiest | Mediterrane muziek</title>
-    <meta name="description" content="Ontdek Juan Solé, een unieke virtuele AI-artiest met mediterrane invloeden.
-	Luister naar originele muziek, bekijk exclusieve video's en stap in de wereld van Juan Solé.">
-	<link rel="canonical" href="https://juansole.nl">
+    <title data-i18n="pageTitle">Contact | Juan Solé</title>
+    <meta name="description" content="Neem contact op met Juan Solé voor vragen en samenwerkingen.">
+	<link rel="canonical" href="https://juansole.nl/contact.html">
 	<meta property="og:type" content="website">
-<meta property="og:url" content="https://juansole.nl/">
-<meta property="og:title" content="Juan Solé | Virtuele AI-artiest | Mediterrane muziek">
-<meta property="og:description" content="Ontdek Juan Solé, een unieke virtuele AI-artiest met mediterrane invloeden. Luister naar originele muziek en ontdek de wereld van Juan Solé.">
+<meta property="og:url" content="https://juansole.nl/contact.html">
+<meta property="og:title" content="Contact | Juan Solé">
+<meta property="og:description" content="Neem contact op met Juan Solé voor vragen en samenwerkingen.">
 <meta property="og:image" content="https://juansole.nl/img/wide1.png">
 <meta property="og:locale" content="nl_NL">
 
@@ -55,12 +54,19 @@ backToTop.addEventListener('click', (e) => {
             </div>
             <nav id="main-nav">
                 <ul class="nav-list" id="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="juan.html">Juan</a></li>
-					<li><a href="muziek.html">Muziek</a></li>
-                  <li><a href="foto-video.html">Foto en Video</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                    <li><a href="faq.html">F.A.Q.</a></li>
+                    <li><a href="index.html" data-i18n="navHome">Home</a></li>
+                    <li><a href="juan.html" data-i18n="navJuan">Juan</a></li>
+					<li><a href="muziek.html" data-i18n="navMusic">Muziek</a></li>
+                  <li><a href="foto-video.html" data-i18n="navPhotos">Foto en Video</a></li>
+                    <li><a href="contact.html" class="active" data-i18n="navContact">Contact</a></li>
+                    <li><a href="faq.html" data-i18n="navFaq">F.A.Q.</a></li>
+                    <li class="language-switch" aria-label="Taal kiezen">
+                        <button type="button" class="lang-btn active" data-lang="nl" aria-pressed="true">NL</button>
+                        <span aria-hidden="true">|</span>
+                        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+                        <span aria-hidden="true">|</span>
+                        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -87,25 +93,11 @@ backToTop.addEventListener('click', (e) => {
 </div>
 
                     <div class="content">
-                        <h1>Contact</h1>
+                        <h1 data-i18n="contactTitle">Contact</h1>
 <div class="language-line">
-    <img src="img/nl.png" alt="Nederlands">
-    <div>
+    <img id="contact-language-flag" class="language-flag" src="img/nl.png" alt="Nederlands">
+    <div data-i18n="contactText">
         Voor vragen, samenwerkingen of andere zaken met betrekking tot Juan Solé kun je contact opnemen via e-mail.
-    </div>
-</div>
-
-<div class="language-line">
-    <img src="img/uk.png" alt="English">
-    <div>
-        For questions, collaborations or other enquiries regarding Juan Solé, please contact us by email.
-    </div>
-</div>
-
-<div class="language-line">
-    <img src="img/es.png" alt="Español">
-    <div>
-        Para preguntas, colaboraciones u otros asuntos relacionados con Juan Solé, puedes ponerte en contacto con nosotros por correo electrónico.
     </div>
 </div>
 
@@ -116,9 +108,7 @@ backToTop.addEventListener('click', (e) => {
         ✉ juansole@ziggo.nl
     </a>
 	
-	<p class="contact-label">
-    <span>✦</span> Contact / Contacto <span>✦</span>
-</p>
+	<p class="contact-label"><span>✦</span> <span data-i18n="contactLabel">Contact</span> <span>✦</span></p>
 </div>
 
                     </div>
@@ -146,7 +136,7 @@ backToTop.addEventListener('click', (e) => {
                 <img src="img/footer_logo.png" alt="Juan Solé Logo">
             </div>
             <div class="footer-info">
-                <p><a href="mailto:juansole@ziggo.nl">Email: juansole@ziggo.nl</a></p>
+                <p><a href="mailto:juansole@ziggo.nl"><span data-i18n="emailLabel">Email:</span> juansole@ziggo.nl</a></p>
                 <p>&copy; All rights reserved 2026</p>
                 <p>Site development by Ocean Multimedia, layout by Jan en Dylan van der Kuijl.</p>
             </div>
@@ -154,5 +144,104 @@ backToTop.addEventListener('click', (e) => {
     </footer>
 
     <script src="script.js"></script>
+
+<script>
+(function () {
+    const translations = {
+        nl: {
+            pageTitle: "Contact | Juan Solé",
+            navHome: "Home", navJuan: "Juan", navMusic: "Muziek",
+            navPhotos: "Foto en Video", navContact: "Contact", navFaq: "F.A.Q.",
+            contactTitle: "Contact",
+            contactText: "Voor vragen, samenwerkingen of andere zaken met betrekking tot Juan Solé kun je contact opnemen via e-mail.",
+            contactLabel: "Contact",
+            emailLabel: "Email:"
+        },
+        es: {
+            pageTitle: "Contacto | Juan Solé",
+            navHome: "Inicio", navJuan: "Juan", navMusic: "Música",
+            navPhotos: "Fotos y vídeos", navContact: "Contacto", navFaq: "Preguntas frecuentes",
+            contactTitle: "Contacto",
+            contactText: "Para preguntas, colaboraciones u otros asuntos relacionados con Juan Solé, puedes ponerte en contacto con nosotros por correo electrónico.",
+            contactLabel: "Contacto",
+            emailLabel: "Correo electrónico:"
+        },
+        en: {
+            pageTitle: "Contact | Juan Solé",
+            navHome: "Home", navJuan: "Juan", navMusic: "Music",
+            navPhotos: "Photos and Video", navContact: "Contact", navFaq: "FAQ",
+            contactTitle: "Contact",
+            contactText: "For questions, collaborations or other enquiries regarding Juan Solé, please contact us by email.",
+            contactLabel: "Contact",
+            emailLabel: "Email:"
+        }
+    };
+
+    const flags = { nl: ["img/nl.png", "Nederlands"], es: ["img/es.png", "Español"], en: ["img/uk.png", "English"] };
+
+    function setLanguage(lang) {
+        const chosen = translations[lang] ? lang : "nl";
+        document.documentElement.lang = chosen;
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+            const key = el.getAttribute("data-i18n");
+            if (translations[chosen][key] !== undefined) el.textContent = translations[chosen][key];
+        });
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+            const active = btn.dataset.lang === chosen;
+            btn.classList.toggle("active", active);
+            btn.setAttribute("aria-pressed", String(active));
+        });
+        const flag = document.getElementById("contact-language-flag");
+        if (flag) {
+            flag.src = flags[chosen][0];
+            flag.alt = flags[chosen][1];
+        }
+        document.title = translations[chosen].pageTitle;
+        const description = {
+            nl: "Neem contact op met Juan Solé voor vragen en samenwerkingen.",
+            es: "Ponte en contacto con Juan Solé para consultas y colaboraciones.",
+            en: "Contact Juan Solé with questions or collaboration enquiries."
+        };
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute("content", description[chosen]);
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", translations[chosen].pageTitle);
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", description[chosen]);
+        const locale = document.querySelector('meta[property="og:locale"]');
+        if (locale) locale.setAttribute("content", chosen === "es" ? "es_ES" : chosen === "en" ? "en_GB" : "nl_NL");
+        try { localStorage.setItem("juansole-language", chosen); } catch (e) {}
+    }
+
+    document.querySelectorAll(".lang-btn").forEach(btn => btn.addEventListener("click", () => setLanguage(btn.dataset.lang)));
+    let initial = "nl";
+    try {
+        const saved = localStorage.getItem("juansole-language");
+        if (saved && translations[saved]) initial = saved;
+    } catch (e) {}
+    setLanguage(initial);
+})();
+</script>
+
+<style>
+.language-switch { display:flex; align-items:center; gap:7px; margin-left:1.5rem; white-space:nowrap; color:#fff; }
+.language-switch .lang-btn { padding:4px 2px; border:0; background:transparent; color:#fff; font:inherit; font-size:13px; font-weight:700; cursor:pointer; }
+.language-switch .lang-btn.active, .language-switch .lang-btn:hover { color:#d8aa35; }
+.menu-toggle { display:none; cursor:pointer; border:0; background:transparent; color:#fff; padding:8px; }
+.menu-toggle .bar { display:block; width:26px; height:3px; margin:4px 0; background-color:#fff; border-radius:2px; transition:transform .3s ease, opacity .3s ease; }
+@media (max-width:768px) {
+  header .container { position:relative; display:flex; flex-wrap:wrap; align-items:center; }
+  header .logo { display:flex !important; align-items:center; justify-content:space-between; width:100%; }
+  .menu-toggle { display:flex !important; flex-direction:column; justify-content:center; margin-left:auto; z-index:1001; }
+  #main-nav { display:flex; width:100%; flex-basis:100%; }
+  #main-nav .nav-list { position:fixed; top:78px; left:-100%; display:flex; flex-direction:column; align-items:stretch; width:100%; margin:0; padding:8px 0 12px; background-color:#3f2f00; box-shadow:0 10px 15px rgba(0,0,0,.25); transition:left .3s ease; z-index:1000; }
+  #main-nav .nav-list.active { left:0; }
+  #main-nav .nav-list > li { display:block; width:100%; margin:0; text-align:left; }
+  #main-nav .nav-list > li > a { display:block; padding:10px 22px; color:#fff; }
+  #main-nav .language-switch { display:flex; flex-direction:row; align-items:center; justify-content:flex-start; width:auto; padding:8px 22px; color:#fff; }
+}
+@media (min-width:769px) { .menu-toggle { display:none !important; } #main-nav { display:flex !important; } #main-nav .nav-list { position:static; left:auto; } }
+</style>
+
 </body>
 </html>
